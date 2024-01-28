@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    username: postgres
+    initialization-mode: always
+    schema: classpath:/schema.sql
+    url: jdbc:postgresql://localhost:5432/bookStore
+    continue-on-error: 'true'
+    password: samet123
+    initialize: 'true'
+  security:
+    user:
+      name: admin
+      password: admin
+  jpa:
+    hibernate:
+      show-sql: 'true'
+      ddl-auto: create
+server:
+  port: '3030'
+logging:
+  level:
+    org.springframework.security.web: DEBUG
