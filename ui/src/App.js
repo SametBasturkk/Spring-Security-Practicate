@@ -22,13 +22,13 @@ const Button = ({ onClick, styleClass, text }) => (
 
 const AddUserPage = ({ setUsername, setPassword, handleAddUser }) => (
   <div className="mb-4">
-    <div class="username-requirements">
+    <div className="username-requirements">
       <p>Username & Password requirements:</p>
       <ul>
         <li>Length: Between 3 and 50 characters</li>
       </ul>
     </div>
-    <div class="password-requirements">
+    <div className="password-requirements">
       <p>Password requirements:</p>
       <ul>
         <li>At least one uppercase letter</li>
