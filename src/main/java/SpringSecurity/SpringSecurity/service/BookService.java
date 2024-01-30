@@ -13,7 +13,7 @@ public class BookService {
 
     private BookRepository bookRepository;
 
-    BookService(BookRepository bookRepository){
+    BookService(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
 
@@ -23,6 +23,18 @@ public class BookService {
 
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
+    }
+
+    public void removeBook(Book book) {
+        bookRepository.delete(book);
+    }
+
+    public List<Book> getBooksByUsername(String username) {
+        return bookRepository.findByOwnerUsername(username);
+    }
+
+    public Book getBookById(Long bookId) {
+        return bookRepository.findById(bookId).orElse(null);
     }
 
 }
