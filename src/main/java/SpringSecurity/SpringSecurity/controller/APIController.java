@@ -35,7 +35,7 @@ public class APIController {
     private BookService bookService;
 
     @Autowired
-    private Bucket bucket; // Assuming you have configured this bean in RateLimiterConfig
+    private Bucket bucket;
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestParam String username, @RequestParam String password, HttpServletResponse response) {

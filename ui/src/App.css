@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+button.btn.btn-secondary.mr-2 {
+  margin-right: 2vw;
+}
